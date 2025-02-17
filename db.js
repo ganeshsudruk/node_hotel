@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 
 // define mongoDB connection URL
 
-const mongoURL ='mongodb://127.0.0.1:27017/hotel'
+//const mongoURL ='mongodb://127.0.0.1:27017/hotel'
+const mongoURL ='mongodb+srv://sudrukganesh:sudrukganesh@cluster0.zxxvc.mongodb.net/'
 
 //set up mongoDB connection
 
