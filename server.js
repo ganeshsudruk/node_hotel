@@ -99,11 +99,14 @@
 const express = require('express')
 const app = express();
 const db = require('./db');
-
+require('dotenv').config();
+ 
 
 
 const bodyParser = require('body-parser');
-app.use(bodyParser.json());
+app.use(bodyParser.json()); //req.body
+const PORT = process.env.PORT || 3000;
+
 
 app.get("/test", async function (req, res) {
   console.log(req.query)
@@ -130,7 +133,10 @@ app.use('/menu' , menuRouter)
 const userRouter = require('./routes/userRoutes');
 app.use('/user' , userRouter)
 
-app.listen(3000, () => {
+
+
+
+app.listen(PORT, () => {
   console.log('listening on port 3000');
 })
 
